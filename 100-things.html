@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="box alt">
+    <div class="row gtr-50 gtr-uniform">
+        {% for thing in site.data.100things %}
+
+            <div class="col-4 col-12-small">
+                <a href="javascript:void(0);" class="button large fit
+                {% if thing.date %} icon solid fa-check-square
+                {% else %} primary icon solid fa-square
+                {% endif %}">
+                    {{ thing.title }}
+                    {% if thing.date %}
+                    ({{ thing.date }})
+                    {% endif %}
+                </a>
+            </div>
+
+        {% endfor %}
+
+        <div class="col-8 col-12-small">
+            <a href="javascript:void(0);" class="button large fit primary icon solid fa-square">
+                一起结婚吧
+            </a>
+        </div>
+
+    </div>
+</div>

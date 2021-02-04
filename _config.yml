@@ -1,0 +1,31 @@
+
+title: 高先森 ♥ 小仙女
+baseurl:  # the subpath of your site, e.g. /blog
+url:  # the base hostname & protocol for your site
+name: 高先森 ♥ 小仙女
+description: 这里是记录高先森和小仙女爱情的地方。
+
+copyright: 高先森 ♥ 小仙女 
+credits: ' | Created by Gaozhe with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="https://html5up.net">HTML5 UP</a>.<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>'
+indexImage: http://zhanghuanlove.imdll.com/2020-09-12.jpg
+
+
+navigation:
+  - title: 首页
+    url: "/"
+  - title: 我们的故事
+    url: "/list/"
+  - title: 恋爱100件小事
+    url: "/100-things.html"
+  - title: 恋爱计时器
+    url: "/timer.html"
+
+# build settings
+markdown: kramdown
+
+excerpt_separator: "<!--more-->"
+
+sass:
+  style: compressed
+
+
