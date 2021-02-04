@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>欢欢小可爱 生日快乐</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	<link rel="icon"  href="img/favicon.png">
+  	<link rel="apple-touch-icon-precomposed" href="img/favicon.png">
+</head>
+<embed src="http://file.imdll.com/方大同 - Nothing's Gonna Change My Love For You.mp3" autostart="true" loop="true" hidden="true"></embed>
+<body>
+  	<div style="display:none;"><img href="img/favicon300.png" alt=""></div>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">2月10日，终于等到今天了</span>
+                <br />
+                <span class="comments">盼了好久，真的好想陪你过生日</span>
+                <br />
+				<span class="comments">可惜，因为这次可怕的疫情，我没办法回到你的身边</span>
+                <br />
+                <span class="comments">所以我动手做了一个小网站</span>
+                <br />
+				<span class="comments">通过网络传达我对你深深的爱</span>
+                <br />
+                <span class="comments">这个网站会永远运行下去</span>
+                <br />
+                <span class="comments">以后我们的点滴，我会一点一点记录在后面</span>
+                <br />
+                <span class="comments">北鼻</span>
+                <br />
+                <span class="comments">这辈子</span>
+                <br />
+                <span class="comments">遇上你</span>
+                <br />
+                <span class="comments">我真的是太幸运了</span>
+                <br />
+                <span class="comments">这是我陪你过的第一个生日</span>
+                <br />
+                <span class="comments">以后每年这一天</span>
+                <br />
+                <span class="comments">我都会在</span>
+                <br />
+                <span class="comments">亲爱的：</span>
+                <br />
+                <span class="comments">生日快乐！</span>
+                <br />
+				<span class="comments">永远爱你！</span>
+                <br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        欢欢小仙女儿，这已经是我们在一起的第
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Happy Birthday!
+                        <br/>Love you forever and ever.
+                        <div class="signature">- 高先森</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2020, 0, 2);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 3000);
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<footer>
+	<div class="pagination">
+     {% if paginator.previous_page %}
+      <a class="previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Prev">Prev</a>
+      {% endif %}
+
+		 {% if paginator.page_trail %}
+        	{% for trail in paginator.page_trail %}
+          		<a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}" class="page {% if page.url == trail.path %} active {% endif %}">{{ trail.num }}</a>
+        	{% endfor %}
+     {% endif %}
+
+      	 {% if paginator.next_page %}
+      		<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Next" class="next">Next</a>
+      {% endif %}
+
+	</div>
+</footer>
+{% endif %}

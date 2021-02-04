@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<!-- Post -->
+<section class="post">
+	<header class="major">
+		<span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+		<h1>{{ page.title }}</h1>
+
+		<p>
+			{% if page.meta_description %}{{ page.meta_description | strip_html | escape }}{% elsif page.teaser %}{{ page.teaser | strip_html | escape }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | escape }}{% endif %}
+		</p>
+
+	</header>
+
+	{% if page.image %}
+	<div class="image main"><img src="{{ page.image }}" alt="" /></div>
+	{% endif %}
+
+	{{ content }}
+
+</section>
